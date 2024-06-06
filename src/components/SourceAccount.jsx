@@ -4,7 +4,7 @@ import { FaTriangleExclamation } from "react-icons/fa6";
 import ProfileImg from "../image/user-circle.png"
 
 
-const SourceAccount = ({selectedCard, setSelectedCard, cards}) => {
+const SourceAccount = ({selectedAccount, setSelectedAccount, cards}) => {
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
@@ -19,7 +19,7 @@ const SourceAccount = ({selectedCard, setSelectedCard, cards}) => {
 	};
 
   useEffect(() => {
-		setSelectedCard(cards[currentCardIndex]);
+		setSelectedAccount(cards[currentCardIndex]);
 	}, []);
 
 	return (
@@ -37,7 +37,7 @@ const SourceAccount = ({selectedCard, setSelectedCard, cards}) => {
 					<div
 						className="rounded shadow w-100 p-4"
 						style={{
-							background: selectedCard.status === "active" ? "#012E63" : "#120d4288",
+							background: selectedAccount.status === "active" ? "#012E63" : "#120d4288",
 						}}
 					>
 						<div className="d-flex justify-content-between align-items-center">
@@ -51,18 +51,18 @@ const SourceAccount = ({selectedCard, setSelectedCard, cards}) => {
 								<div>
 									<p className="text-warning small mb-1">Savings Account</p>
 									<h3 className="text-light mb-0 text-uppercase">
-										{selectedCard.name}
+										{selectedAccount.name}
 									</h3>
 									<p className="text-light small">
-										{selectedCard.accountNumber}
+										{selectedAccount.accountNumber}
 									</p>
 								</div>
 							</div>
 							<div className="d-flex flex-column text-right">
-								<h3 className="text-light mb-0">₦{selectedCard.balance}</h3>
+								<h3 className="text-light mb-0">₦{selectedAccount.balance}</h3>
 								<p className="text-secondary small mb-0">
 									Book Balance:{" "}
-									<span className="text-warning">₦{selectedCard.balance}</span>
+									<span className="text-warning">₦{selectedAccount.balance}</span>
 								</p>
 							</div>
 						</div>
@@ -76,7 +76,7 @@ const SourceAccount = ({selectedCard, setSelectedCard, cards}) => {
 					<FaAngleRight size={32} />
 				</button>
 			</div>
-			{selectedCard.status !== "active" && (
+			{selectedAccount.status !== "active" && (
 				<small className="d-flex align-items-center text-muted pl-2">
 					<FaTriangleExclamation className="text-danger small mt-1" />
 					Account Not Debitable

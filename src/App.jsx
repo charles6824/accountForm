@@ -22,11 +22,7 @@ const App = () => {
   };
 
 	const HandleSubmit = () => {
-		if(formData.selectedAccount.status === "active"){
-			setStep((prevStep) => prevStep + 1)
-		}else{
-			alert("Sorry i am still reading the selected Account status as inactive")
-		}
+		setStep((prevStep) => prevStep + 1)
 	}
 
 	const isFormValid = selectedAccount && selectedAccount.status === "active" && formData.amount && formData.narration
