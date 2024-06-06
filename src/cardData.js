@@ -1,0 +1,42 @@
+export const cardData = [
+	{
+		id: 1,
+		accountNumber: "1234567890",
+		balance: "500,000.00",
+		name: "JOHNSON EZRA CHUKWUEMEKA",
+		selected: false,
+		status: "inactive",
+	},
+	{
+		id: 2,
+		accountNumber: "2345678901",
+		balance: "150,000.00",
+		name: "Jane Smith",
+		selected: false,
+		status: "active",
+	},
+	{
+		id: 3,
+		accountNumber: "3456789012",
+		balance: "250,400,000.00",
+		name: "Robert Brown",
+		selected: false,
+		status: "inactive",
+	},
+	{
+		id: 4,
+		accountNumber: "4567890123",
+		balance: "1,350,000.00",
+		name: "Emily Davis",
+		selected: false,
+		status: "inactive",
+	},
+	{
+		id: 5,
+		accountNumber: "5678901234",
+		balance: "45,000.00",
+		name: "Michael Johnson",
+		selected: false,
+		status: "active",
+	},
+];
